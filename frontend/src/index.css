@@ -3,6 +3,8 @@
 @plugin "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
 
+@plugin "tailwind-scrollbar";
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 body {
@@ -11,4 +13,11 @@ body {
 
 .ql-editor {
   font-size: 1.05rem;
+}
+
+@layer utilities {
+  /* Enable both thin and default scrollbar styles */
+  .scrollbar-thin {
+    @apply scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-200;
+  }
 }
