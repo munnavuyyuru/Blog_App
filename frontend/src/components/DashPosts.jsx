@@ -14,7 +14,6 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
-import { set } from "mongoose";
 
 const DashPosts = () => {
   const { currentUser } = useSelector((state) => state.user);
@@ -22,7 +21,6 @@ const DashPosts = () => {
   const [showMore, setShowMore] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [postIdToDelete, setPostIdToDelete] = useState("");
-  console.log(userPosts);
 
   const fetchPosts = async () => {
     try {
