@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import flowbiteReact from "flowbite-react/plugin/vite";
 import scrollbar from "tailwind-scrollbar";
+import lineClamp from "@tailwindcss/line-clamp";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -17,7 +18,7 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss({
-      plugins: [scrollbar({ nocompatible: true })],
+      plugins: [scrollbar({ nocompatible: true }), lineClamp],
     }),
     flowbiteReact(),
   ],
